@@ -1,9 +1,5 @@
 # AgentForce — Salesforce APIs Reference
 
-Reference for every Salesforce REST API the AgentForce workload calls. All calls
-originate from `AgentForceClient` (`src/Coherence/dev/Coherence/Core/Workloads/AgentForce/AgentForceClient.cs`)
-and are orchestrated by `AgentForceService`.
-
 - **Salesforce API version:** `v62.0` (constant `AgentForceClient.SalesforceApiVersion`)
 - **Auth model:** OAuth2 `client_credentials` grant against the org's instance URL using a Connected App's consumer key/secret stored on the `AgentRegistryConnection`.
 - **Authoritative base URL after auth:** `SalesforceTokenResponse.ApiInstanceUrl` (falls back to `InstanceUrl` when null). All subsequent calls use this — *not* the originally configured instance URL.
